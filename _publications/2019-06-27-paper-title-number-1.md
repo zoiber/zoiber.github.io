@@ -2,7 +2,7 @@
 title: "Vibration signal analysis using symbolic dynamics for gearbox fault diagnosis"
 collection: publications
 permalink: /publication/2019-07-27-Vibration-signal-analysis-using-symbolic-dynamics-for-gearbox-fault-diagnosis
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: ''
 date: 2019-06-27
 venue: 'The International Journal of Advanced Manufacturing Technology'
 paperurl: 'https://link.springer.com/article/10.1007/s00170-019-03858-0'

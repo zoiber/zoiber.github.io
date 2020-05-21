@@ -2,7 +2,7 @@
 title: "Accelerometer Placement Comparison for Crack Detection in Railway Axles Using Vibration Signals and Machine Learning"
 collection: publications
 permalink: /publication/2010-10-01-Accelerometer-Placement-Comparison-for-Crack-Detection-in-Railway-Axles-Using-Vibration-Signals-and-Machine-Learning
-excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
+excerpt: ''
 date: 2019-07-11
 venue: 'Prognostics and System Health Management Conference'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/8756473'

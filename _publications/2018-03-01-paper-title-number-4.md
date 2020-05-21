@@ -2,7 +2,7 @@
 title: "Gear Crack Level Classification by Using KNN and Time-Domain Features from Acoustic Emission Signals under Different Motor Speeds and Loads"
 collection: publications
 permalink: /publication/2018-03-01-Gear-Crack-Level-Classification-by-Using-KNN-and-Time-Domain-Features-from-Acoustic-Emission-Signals-under-Different-Motor-Speeds-and-Loads
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
+excerpt: ''
 date: 2018-03-01
 venue: 'Proceedings, International Conference on Sensing,Diagnostics, Prognostics, and Control (SDPC)'
 paperurl: 'https://www.researchgate.net/publication/331762965_Gear_Crack_Level_Classification_by_Using_KNN_and_Time-Domain_Features_from_Acoustic_Emission_Signals_Under_Different_Motor_Speeds_and_Loads'

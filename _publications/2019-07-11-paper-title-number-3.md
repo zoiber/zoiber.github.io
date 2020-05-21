@@ -2,7 +2,7 @@
 title: "Influence of Accelerometer Position on Gearbox Fault Severity Classification through Evaluation of Deep Learning Models"
 collection: publications
 permalink: /publication/2019-07-11-Influence-of-Accelerometer-Position-on-Gearbox-Fault-Severity-Classification-through-Evaluation-of-Deep-Learning-Models
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
+excerpt: ''
 date: 2019-07-11
 venue: 'Prognostics and System Health Management Conference'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/8756378'
