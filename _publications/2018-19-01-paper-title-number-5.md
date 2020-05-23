@@ -1,7 +1,7 @@
 ---
 title: "A comparative feature analysis for gear pitting level classification by using acoustic emission, vibration and current signals"
 collection: publications
-permalink: /publication/2015-10-01-A-comparative-feature-analysis-for-gear-pitting-level-classification-by-using-acoustic-emission-vibration-and-current-signals
+permalink: /publication/2018-09-01-A-comparative-feature-analysis-for-gear-pitting-level-classification-by-using-acoustic-emission-vibration-and-current-signals
 excerpt: ''
 date: 2018-09-01
 venue: 'IFAC · International Federation of Automatic Control'
