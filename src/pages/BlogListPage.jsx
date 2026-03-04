@@ -166,8 +166,8 @@ const BlogListPage = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
 
-                    <div className="absolute top-6 right-6">
-                      <span className="bg-white/20 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 shadow-inner">
+                    <div className="absolute top-6 right-6 z-10">
+                      <span className="bg-white/20 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 shadow-inner opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
                         {post.category}
                       </span>
                     </div>
