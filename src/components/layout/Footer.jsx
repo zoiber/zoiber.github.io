@@ -27,9 +27,9 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2">
-              <li><button onClick={() => handleNavClick('/acerca-de')} className="footer-link">Acerca de</button></li>
+              <li><button onClick={() => handleNavClick('/')} className="footer-link">Inicio</button></li>
               <li><button onClick={() => handleNavClick('/portafolio')} className="footer-link">Portafolio</button></li>
-              <li><button onClick={() => handleNavClick('/recursos')} className="footer-link">Recursos</button></li>
+              <li><button onClick={() => handleNavClick('/acerca-de')} className="footer-link">Acerca de</button></li>
               <li><button onClick={() => handleNavClick('/contacto')} className="footer-link">Contacto</button></li>
             </ul>
           </div>

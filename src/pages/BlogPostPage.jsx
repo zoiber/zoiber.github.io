@@ -6,7 +6,6 @@ import { Calendar, User, ArrowLeft, Linkedin, X, Facebook, Send } from 'lucide-r
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { getPostById } from '../utils/blogLoader';
-import NewsletterSubscribe from '@/components/NewsletterSubscribe';
 import { supabase } from '@/lib/customSupabaseClient';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -230,7 +229,6 @@ const BlogPostPage = () => {
           </motion.div>
         </div>
       </div>
-      <NewsletterSubscribe />
     </>
   );
 };

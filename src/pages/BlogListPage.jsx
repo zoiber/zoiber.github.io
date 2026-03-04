@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Search, Calendar, X as CloseIcon, User, ArrowLeft } from 'lucide-react';
 import { getAllPosts } from '../utils/blogLoader';
-import NewsletterSubscribe from '@/components/NewsletterSubscribe';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { AnimatePresence } from 'framer-motion';
@@ -46,7 +45,7 @@ const ProjectModal = ({ post, isOpen, onClose }) => {
                 <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-700 rounded-full text-sm font-bold uppercase tracking-widest mb-6 border border-amber-200 shadow-sm">
                   {post.category}
                 </span>
-                <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   {post.title}
                 </h2>
 
@@ -131,8 +130,8 @@ const BlogListPage = () => {
       <div className="section-padding pt-32 bg-white min-h-screen">
         <div className="container-custom">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight"><span className="text-gradient">Portafolio</span></h1>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto font-medium italic">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight"><span className="text-gradient">Portafolio</span></h1>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-medium">
               Casos de estudio y proyectos aplicados a la realidad industrial local.
             </p>
           </motion.div>
@@ -186,7 +185,7 @@ const BlogListPage = () => {
                     <span className="text-amber-400 text-xs font-black uppercase tracking-[0.3em] mb-4 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                       {post.category}
                     </span>
-                    <h2 className="text-white text-3xl md:text-4xl font-black leading-[1.1] mb-6 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                    <h2 className="text-white text-3xl md:text-4xl font-bold leading-[1.1] mb-6 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">
                       {post.title}
                     </h2>
                     <div className="flex items-center text-amber-500/80 font-bold text-sm tracking-widest transform translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
@@ -212,8 +211,6 @@ const BlogListPage = () => {
         isOpen={isModalOpen}
         onClose={closePost}
       />
-
-      <NewsletterSubscribe />
     </>
   );
 };
