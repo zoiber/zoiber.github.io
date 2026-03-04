@@ -28,7 +28,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2">
               <li><button onClick={() => handleNavClick('/acerca-de')} className="footer-link">Acerca de</button></li>
-              <li><button onClick={() => handleNavClick('/blog')} className="footer-link">Blog</button></li>
+              <li><button onClick={() => handleNavClick('/portafolio')} className="footer-link">Portafolio</button></li>
               <li><button onClick={() => handleNavClick('/recursos')} className="footer-link">Recursos</button></li>
               <li><button onClick={() => handleNavClick('/contacto')} className="footer-link">Contacto</button></li>
             </ul>
@@ -39,7 +39,7 @@ const Footer = () => {
             <div className="flex space-x-4 justify-center md:justify-start">
               <button onClick={() => handleSocialClick('https://www.linkedin.com/in/pablo-lucero-ec/')} className="social-icon"><Linkedin size={20} /></button>
               <button onClick={() => handleSocialClick('https://x.com/PabloLuceroEC')} className="social-icon"><X size={20} /></button>
-              <button onClick={() => handleNavClick('/blog')} className="social-icon"><Rss size={20} /></button>
+              <button onClick={() => handleNavClick('/portafolio')} className="social-icon"><Rss size={20} /></button>
             </div>
           </div>
         </div>

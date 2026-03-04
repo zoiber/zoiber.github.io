@@ -21,14 +21,13 @@ const BlogListPage = () => {
   return (
     <>
       <Helmet>
-        <title>Blog - Pablo Lucero | Transformación Digital Industrial</title>
+        <title>Portafolio - Pablo Lucero | Transformación Digital Industrial</title>
         <meta name="description" content="Tu punto de apoyo en el viaje hacia la transformación digital. Artículos y noticias sobre transformación digital industrial, Industria 4.0, IoT y automatización." />
       </Helmet>
       <div className="section-padding pt-32 bg-white">
         <div className="container-custom">
-          <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">El <span className="text-gradient">Blog</span></h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Un espacio para compartir ideas, análisis y visión sobre la nueva revolución industrial.</p>
+          <motion.div className="text-center mb-8" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">El <span className="text-gradient">Portafolio</span></h1>
           </motion.div>
 
           <div className="mb-12">
@@ -55,24 +54,26 @@ const BlogListPage = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {filteredPosts.map((post, index) => (
-              <motion.article key={post.id} className="blog-card" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }}>
-                <Link to={`/blog/${post.id}`} className="block">
-                  <div className="h-48 overflow-hidden">
-                    <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" alt={post.title} src={post.image} />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <span className="font-semibold text-amber-600 bg-amber-100 py-1 px-2 rounded-full text-xs mr-3">{post.category}</span>
-                      <Calendar size={16} className="mr-1" />
-                      {post.date}
+              <motion.article
+                key={post.id}
+                className="break-inside-avoid relative group rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Link to={`/portafolio/${post.id}`} className="block">
+                  <div className="relative overflow-hidden">
+                    <img
+                      className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                      alt={post.title}
+                      src={post.image}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                      <span className="text-amber-400 text-xs font-bold uppercase tracking-widest mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{post.category}</span>
+                      <h2 className="text-white text-xl font-bold leading-tight transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">{post.title}</h2>
                     </div>
-                    <h2 className="text-xl font-semibold mb-3 text-gray-900">{post.title}</h2>
-                    <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                    <span className="text-amber-500 font-semibold hover:text-amber-600 transition-colors inline-flex items-center">
-                      Leer más <ArrowRight className="ml-1" size={16} />
-                    </span>
                   </div>
                 </Link>
               </motion.article>

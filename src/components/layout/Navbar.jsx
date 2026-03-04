@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const navLinks = [
   { id: 'inicio', label: 'Inicio', path: '/' },
-  { id: 'blog', label: 'Blog', path: '/blog' },
+  { id: 'portafolio', label: 'Portafolio', path: '/portafolio' },
   { id: 'acerca-de', label: 'Acerca de', path: '/acerca-de' },
   //{ id: 'recursos', label: 'Recursos', path: '/recursos' },
   { id: 'contacto', label: 'Contacto', path: '/contacto' }
@@ -31,7 +31,7 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50">
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
-          <motion.div 
+          <motion.div
             className="text-2xl font-bold text-gradient cursor-pointer"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

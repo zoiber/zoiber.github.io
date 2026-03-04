@@ -14,8 +14,8 @@ const HomePage = () => {
     <>
       <Helmet>
         <title>Pablo Lucero - Tu punto de apoyo en el viaje hacia la transformación digital.</title>
-        <meta name="description" content="Tu punto de apoyo en el viaje hacia la transformación digital. Blog personal sobre transformación digital industrial, Industria 4.0, IIoT y tecnología. Ideas, análisis y visión para conectar tecnología e industria." />
-        <meta name="keywords" content="transformación digital, automatización industrial, IoT, blog, experto, industria 4.0" />
+        <meta name="description" content="Tu punto de apoyo en el viaje hacia la transformación digital. Portafolio personal sobre transformación digital industrial, Industria 4.0, IIoT y tecnología. Ideas, análisis y visión para conectar tecnología e industria." />
+        <meta name="keywords" content="transformación digital, automatización industrial, IoT, portafolio, experto, industria 4.0" />
       </Helmet>
 
       <section id="inicio" className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden text-center">
@@ -31,7 +31,7 @@ const HomePage = () => {
             Ideas, análisis y visión sobre la nueva revolución industrial.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-            <button onClick={() => navigate('/blog')} className="btn-primary inline-flex items-center text-lg">
+            <button onClick={() => navigate('/portafolio')} className="btn-primary inline-flex items-center text-lg">
               Comienza a explorar
               <ArrowRight className="ml-2" size={20} />
             </button>
@@ -48,7 +48,7 @@ const HomePage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recentPosts.map((post, index) => (
               <motion.article key={post.id} className="blog-card" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
-                <Link to={`/blog/${post.id}`} className="block">
+                <Link to={`/portafolio/${post.id}`} className="block">
                   <div className="h-48 overflow-hidden">
                     <img className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" alt={post.title} src={post.image} />
                   </div>

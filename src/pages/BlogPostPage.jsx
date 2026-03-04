@@ -160,7 +160,7 @@ const BlogPostPage = () => {
       <div className="section-padding pt-32 text-center">
         <h1 className="text-4xl font-bold">Post no encontrado</h1>
         <p className="mt-4">El artículo que buscas no existe o fue movido.</p>
-        <Link to="/blog" className="btn-primary mt-8 inline-block">Volver al Blog</Link>
+        <Link to="/portafolio" className="btn-primary mt-8 inline-block">Volver al Portafolio</Link>
       </div>
     );
   }
@@ -168,7 +168,7 @@ const BlogPostPage = () => {
   return (
     <>
       <Helmet>
-        <title>{post.title} - Pablo Lucero | Blog</title>
+        <title>{post.title} - Pablo Lucero | Portafolio</title>
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
@@ -178,9 +178,9 @@ const BlogPostPage = () => {
       <div className="section-padding pt-32">
         <div className="container-custom max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <button onClick={() => navigate('/blog')} className="inline-flex items-center text-amber-500 font-semibold mb-8 hover:underline">
+            <button onClick={() => navigate('/portafolio')} className="inline-flex items-center text-amber-500 font-semibold mb-8 hover:underline">
               <ArrowLeft size={18} className="mr-2" />
-              Volver al Blog
+              Volver al Portafolio
             </button>
 
             <span className="font-semibold text-amber-600 bg-amber-100 py-1 px-3 rounded-full text-sm mb-4 inline-block">{post.category}</span>
