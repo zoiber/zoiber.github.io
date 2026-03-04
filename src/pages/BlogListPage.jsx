@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Search, Calendar, X as CloseIcon, User, ArrowLeft } from 'lucide-react';
 import { getAllPosts } from '../utils/blogLoader';
 import ReactMarkdown from 'react-markdown';
@@ -84,7 +84,8 @@ const ProjectModal = ({ post, isOpen, onClose }) => {
 };
 
 const BlogListPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchParams] = useSearchParams();
+  const searchTerm = searchParams.get('q') || '';
   const [posts, setPosts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('Todos');
   const [selectedPost, setSelectedPost] = useState(null);
@@ -129,24 +130,8 @@ const BlogListPage = () => {
       </Helmet>
       <div className="section-padding pt-32 bg-white min-h-screen">
         <div className="container-custom">
-          <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-medium">
-              Casos de estudio y proyectos aplicados a la realidad industrial local.
-            </p>
-          </motion.div>
 
           <div className="mb-12">
-            <div className="relative max-w-lg mx-auto mb-10 shadow-sm border border-gray-100 rounded-2xl overflow-hidden">
-              <input
-                type="text"
-                placeholder="Explorar proyectos..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-6 py-4 pl-14 outline-none text-gray-700 bg-gray-50/50 focus:bg-white transition-all duration-300"
-              />
-              <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-amber-500" size={22} />
-            </div>
-
             <div className="flex flex-wrap justify-center gap-3 mb-16">
               {categories.map((category) => (
                 <button
@@ -161,47 +146,57 @@ const BlogListPage = () => {
                 </button>
               ))}
             </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-            {filteredPosts.map((post, index) => (
-              <motion.article
-                key={post.id}
-                onClick={() => openPost(post)}
-                className="relative group rounded-[2.5rem] overflow-hidden cursor-pointer shadow-xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-700 bg-white border border-gray-100"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="relative overflow-hidden aspect-[16/11]">
-                  <img
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                    alt={post.title}
-                    src={post.image}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-90 transition-opacity duration-500 flex flex-col justify-end p-10 md:p-12">
-                    <span className="text-amber-400 text-xs font-black uppercase tracking-[0.3em] mb-4 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      {post.category}
-                    </span>
-                    <h2 className="text-white text-3xl md:text-4xl font-bold leading-[1.1] mb-6 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                      {post.title}
-                    </h2>
-                    <div className="flex items-center text-amber-500/80 font-bold text-sm tracking-widest transform translate-y-8 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
-                      VER PROYECTO <ArrowLeft className="ml-2 rotate-180" size={16} />
+            <div className="grid md:grid-cols-2 gap-10">
+              {filteredPosts.map((post, index) => (
+                <motion.article
+                  key={post.id}
+                  className="group cursor-pointer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  onClick={() => openPost(post)}
+                >
+                  <div className="relative overflow-hidden rounded-3xl aspect-[16/10] shadow-lg mb-6">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+
+                    <div className="absolute top-6 right-6">
+                      <span className="bg-white/20 backdrop-blur-md text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 shadow-inner">
+                        {post.category}
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight group-hover:text-amber-400 transition-colors duration-300">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-300 line-clamp-2 text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                        {post.excerpt}
+                      </p>
                     </div>
                   </div>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-
-          {filteredPosts.length === 0 && (
-            <div className="text-center py-32 bg-gray-50 rounded-[3rem] border-2 border-dashed border-gray-200">
-              <p className="text-2xl text-gray-400 font-bold mb-4">No hay resultados para tu búsqueda</p>
-              <button onClick={() => { setSearchTerm(''); setSelectedCategory('Todos'); }} className="text-amber-600 font-black hover:text-amber-700 transition-colors duration-300">Mostrar todos los proyectos</button>
+                </motion.article>
+              ))}
             </div>
-          )}
+
+            {filteredPosts.length === 0 && (
+              <div className="text-center py-20">
+                <p className="text-xl text-gray-500">No se encontraron proyectos con esos criterios.</p>
+                <button
+                  onClick={() => setSelectedCategory('Todos')}
+                  className="mt-4 text-amber-500 font-bold hover:underline"
+                >
+                  Ver todos los proyectos
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
