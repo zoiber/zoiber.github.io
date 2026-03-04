@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
-import { blogPosts } from '@/data/blog';
+import { getAllPosts } from '../utils/blogLoader';
 import NewsletterSubscribe from '@/components/NewsletterSubscribe';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const recentPosts = blogPosts.slice(0, 3);
+  const [recentPosts, setRecentPosts] = useState([]);
+
+  useEffect(() => {
+    const allPosts = getAllPosts();
+    setRecentPosts(allPosts.slice(0, 3));
+  }, []);
 
   return (
     <>

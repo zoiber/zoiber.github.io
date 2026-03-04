@@ -3,7 +3,9 @@ import { Helmet } from 'react-helmet';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowLeft, Linkedin, X, Facebook, Send } from 'lucide-react';
-import { blogPosts } from '@/data/blog';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
+import { getPostById } from '../utils/blogLoader';
 import NewsletterSubscribe from '@/components/NewsletterSubscribe';
 import { supabase } from '@/lib/customSupabaseClient';
 import { useToast } from '@/components/ui/use-toast';
@@ -107,9 +109,9 @@ const CommentsList = ({ comments }) => (
 const BlogPostPage = () => {
   const { postId } = useParams();
   const navigate = useNavigate();
-  const post = blogPosts.find(p => p.id === postId);
-
+  const [post, setPost] = useState(null);
   const [comments, setComments] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchComments = useCallback(async () => {
     if (!postId) return;
@@ -129,10 +131,14 @@ const BlogPostPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    const loadedPost = getPostById(postId);
+    setPost(loadedPost);
+    setLoading(false);
     fetchComments();
   }, [postId, fetchComments]);
 
   const handleShare = (platform) => {
+    if (!post) return;
     const postUrl = window.location.href;
     const postTitle = post.title;
     const postExcerpt = post.excerpt;
@@ -155,9 +161,17 @@ const BlogPostPage = () => {
     window.open(shareUrl, '_blank', 'noopener,noreferrer');
   };
 
+  if (loading) {
+    return (
+      <div className="section-padding pt-32 text-center h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-amber-500"></div>
+      </div>
+    );
+  }
+
   if (!post) {
     return (
-      <div className="section-padding pt-32 text-center">
+      <div className="section-padding pt-32 text-center h-screen flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold">Post no encontrado</h1>
         <p className="mt-4">El artículo que buscas no existe o fue movido.</p>
         <Link to="/portafolio" className="btn-primary mt-8 inline-block">Volver al Portafolio</Link>
@@ -195,7 +209,11 @@ const BlogPostPage = () => {
               <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
             </div>
 
-            <div className="prose lg:prose-xl max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: post.content }} />
+            <div className="prose lg:prose-xl max-w-none text-gray-700">
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {post.content}
+              </ReactMarkdown>
+            </div>
 
             <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
               <span className="font-semibold">Compartir este artículo:</span>
