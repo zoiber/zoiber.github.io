@@ -130,7 +130,6 @@ const BlogListPage = () => {
       <div className="section-padding pt-32 bg-white min-h-screen">
         <div className="container-custom">
           <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight"><span className="text-gradient">Portafolio</span></h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-medium">
               Casos de estudio y proyectos aplicados a la realidad industrial local.
             </p>
