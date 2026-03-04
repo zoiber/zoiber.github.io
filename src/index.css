@@ -104,16 +104,34 @@ body {
 }
 
 .prose {
-  @apply text-gray-700;
+  @apply text-gray-700 leading-relaxed;
+}
+.prose h1 {
+  @apply text-3xl font-bold text-gray-900 mt-10 mb-6;
+}
+.prose h2 {
+  @apply text-2xl font-bold text-gray-800 mt-8 mb-4;
 }
 .prose h3 {
-  @apply text-gray-800;
+  @apply text-xl font-bold text-gray-800 mt-6 mb-3;
 }
-.prose ul > li::before {
-  @apply bg-amber-500;
+.prose p {
+  @apply mb-4;
+}
+.prose ul {
+  @apply mb-4 list-disc pl-5;
+}
+.prose ul > li {
+  @apply mb-2;
+}
+.prose ul > li::marker {
+  @apply text-amber-500;
 }
 .prose a {
-  @apply text-amber-600 hover:text-amber-700;
+  @apply text-amber-600 hover:text-amber-700 font-medium underline;
+}
+.prose strong {
+  @apply font-bold text-gray-900;
 }
 
 .modal {
