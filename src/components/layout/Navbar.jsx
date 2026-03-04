@@ -6,7 +6,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const navLinks = [
   { id: 'inicio', label: 'Inicio', path: '/' },
   { id: 'blog', label: 'Blog', path: '/blog' },
-  { id: 'sobre-mi', label: 'Sobre Mí', path: '/sobre-mi' },
+  { id: 'acerca-de', label: 'Acerca de', path: '/acerca-de' },
   //{ id: 'recursos', label: 'Recursos', path: '/recursos' },
   { id: 'contacto', label: 'Contacto', path: '/contacto' }
 ];

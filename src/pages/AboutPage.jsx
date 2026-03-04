@@ -23,7 +23,7 @@ const AboutPage = () => {
   }];
   return <>
     <Helmet>
-      <title>Sobre Mí - Pablo Lucero | Experto en Transformación Digital</title>
+      <title>Acerca de - Pablo Lucero | Experto en Transformación Digital</title>
       <meta name="description" content="Tu punto de apoyo en el viaje hacia la transformación digital. Conoce mi trayectoria, experiencia y especialización en transformación digital industrial, IIoT, ciberseguridad y más." />
     </Helmet>
     <div className="section-padding pt-32">
@@ -39,7 +39,7 @@ const AboutPage = () => {
         }}>
           <div className="grid lg:grid-cols-3 gap-12 items-start">
             <div className="lg:col-span-2">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Sobre Mí</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Sobre mí</h1>
               <p className="text-xl text-gray-600 mb-6">
                 Soy un ingeniero apasionado por la convergencia entre tecnología e industria. Durante más de 9 años de trayectoria he combinado la investigación académica con la aplicación práctica de proyectos tecnológicos en la industria de manufactura.
               </p>
