@@ -12,7 +12,7 @@ import { AuthProvider } from '@/contexts/SupabaseAuthContext';
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename="/pablo-lucero-github">
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />

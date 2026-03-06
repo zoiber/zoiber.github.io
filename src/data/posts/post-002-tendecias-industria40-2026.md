@@ -4,6 +4,7 @@ title: "Tendencias Globales de la Industria 4.0 para 2026"
 date: "6-Oct-2025"
 author: "Pablo Lucero"
 category: "Industria 4.0"
+youtubeId: "L23oIHZE14w"
 image: "https://images.unsplash.com/photo-1666281215282-22388b1d0e2c?q=80&w=1170&auto=format&fit=crop"
 excerpt: "Investigación y despliegue de tecnologías emergentes de IA Generativa para la asistencia en mantenimiento industrial."
 ---

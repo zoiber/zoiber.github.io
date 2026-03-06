@@ -4,6 +4,7 @@ title: "El futuro de la manufactura en Latinoamérica"
 date: "20-Oct-2025"
 author: "Pablo Lucero"
 category: "Industria 4.0"
+youtubeId: "L23oIHZE14w"
 image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?q=80&w=1600&auto=format&fit=crop"
 excerpt: "Desarrollo de una estrategia de salto tecnológico (Leapfrogging) para una PYME industrial buscando exportar a mercados competitivos."
 ---

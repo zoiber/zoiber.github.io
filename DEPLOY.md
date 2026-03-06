@@ -1,54 +1,53 @@
-# Guía de Despliegue Local - Portafolio Pablo Lucero
+# Guía de Despliegue - Portafolio Pablo Lucero
 
-Esta guía detalla los pasos necesarios para configurar y ejecutar el proyecto de portafolio en tu entorno local.
+Esta guía detalla los pasos para configurar, ejecutar localmente y desplegar en GitHub Pages.
 
-## Requisitos Previos
+## 1. Despliegue Local
 
-Asegúrate de tener instalados los siguientes componentes en tu sistema:
+### Requisitos Previos
+- **Node.js**: Versión indicada en `.nvmrc`.
+- **npm**: Habitualmente incluido con Node.js.
 
-- **Node.js**: Se recomienda la versión indicada en el archivo `.nvmrc` (puedes usar `nvm use` si tienes NVM instalado).
-- **npm**: Habitualmente incluido con la instalación de Node.js.
+### Pasos
+1. **Instalar Dependencias**: `npm install`
+2. **Ejecutar Desarrollo**: `npm run dev` (Disponible en `http://localhost:3000`)
+3. **Build Manual**: `npm run build` (Resultados en `dist/`)
 
-## Pasos para el Despliegue
+---
 
-### 1. Clonar el Repositorio
+## 2. Despliegue en GitHub Pages
 
-Si aún no tienes el código, clona el repositorio desde GitHub:
+El proyecto usa **GitHub Actions** para despliegue automático.
 
+### Paso 1: Configuración Inicial de Git (Si no se ha hecho)
+Si tu repositorio local no está conectado a GitHub todavía:
 ```bash
-git clone <url-del-repositorio>
-cd pablo-lucero-portafolio
+git remote add origin https://github.com/<TU-USUARIO>/pablo-lucero-github.git
+git branch -M main
 ```
 
-### 2. Instalar Dependencias
-
-Ejecuta el siguiente comando en la raíz del proyecto para instalar todas las librerías necesarias:
-
+### Paso 2: Subir Cambios
 ```bash
-npm install
+git add .
+git commit -m "feat: setup github pages deployment"
+git push -u origin main
 ```
 
-### 3. Ejecutar en Modo Desarrollo
+### Paso 3: Activar en GitHub
+1. Ve a **Settings > Pages** en tu repositorio.
+2. En **Build and deployment > Source**, selecciona **GitHub Actions**.
 
-Para iniciar el servidor de desarrollo local con recarga en tiempo real, usa:
+### Paso 4: Verificar URL
+El sitio estará disponible en:
+`https://<TU-USUARIO>.github.io/pablo-lucero-github/`
 
-```bash
-npm run dev
-```
+> [!NOTE]
+> Reemplaza `<TU-USUARIO>` con tu nombre de usuario de GitHub (ej. `pablo-lucero`).
 
-Una vez ejecutado, el proyecto estará disponible en `http://localhost:3000` (o el puerto que se indique en la terminal).
+---
 
-### 4. Generar Versión de Producción (Opcional)
+## Notas Técnicas
 
-Si deseas generar los archivos estáticos optimizados para producción:
-
-```bash
-npm run build
-```
-
-Los archivos resultantes se guardarán en la carpeta `dist/`.
-
-## Notas Adicionales
-
-- **Configuración de Supabase**: El cliente de Supabase ya viene preconfigurado en `src/lib/customSupabaseClient.js`, por lo que no es necesario configurar variables de entorno adicionales para las funcionalidades básicas.
-- **Vite**: El proyecto utiliza Vite como herramienta de construcción, lo que garantiza una experiencia de desarrollo rápida.
+- **Enrutamiento SPA**: Se usan `public/404.html` e `index.html` con scripts de redirección para que las rutas de React funcionen al refrescar.
+- **Base Path**: Vite está configurado con `base: '/pablo-lucero-github/'`.
+- **Supabase**: Preconfigurado en `src/lib/customSupabaseClient.js`.

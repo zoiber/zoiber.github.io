@@ -234,6 +234,7 @@ logger.error = (msg, options) => {
 }
 
 export default defineConfig({
+	base: '/pablo-lucero-github/',
 	customLogger: logger,
 	plugins: [
 		...(isDev ? [inlineEditPlugin(), editModeDevPlugin(), iframeRouteRestorationPlugin(), selectionModePlugin()] : []),

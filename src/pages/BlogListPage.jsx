@@ -9,6 +9,8 @@ import rehypeRaw from 'rehype-raw';
 import { AnimatePresence } from 'framer-motion';
 
 const ProjectModal = ({ post, isOpen, onClose }) => {
+  const [isPlayingVideo, setIsPlayingVideo] = useState(false);
+
   if (!post) return null;
 
   return (
@@ -65,6 +67,45 @@ const ProjectModal = ({ post, isOpen, onClose }) => {
                     {post.content}
                   </ReactMarkdown>
                 </div>
+
+                {post.youtubeId && (
+                  <div className="mt-16 pt-10 border-t border-gray-100">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-8">Galería</h3>
+                    <div className="group/video relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg bg-gray-900 flex items-center justify-center">
+                      {!isPlayingVideo ? (
+                        <>
+                          <img
+                            src={`https://img.youtube.com/vi/${post.youtubeId}/maxresdefault.jpg`}
+                            alt="Miniatura del video"
+                            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover/video:scale-105 transition-transform duration-700"
+                            onError={(e) => e.target.src = post.image}
+                          />
+                          <div className="absolute inset-0 bg-black/20 group-hover/video:bg-black/40 transition-colors duration-300" />
+                          <button
+                            onClick={() => setIsPlayingVideo(true)}
+                            className="relative z-10 flex flex-col items-center gap-4 text-white group-hover/video:scale-110 transition-transform duration-300"
+                          >
+                            <div className="w-20 h-20 bg-amber-500 rounded-full flex items-center justify-center shadow-2xl pulse-animation">
+                              <svg className="w-10 h-10 fill-white ml-1" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                              </svg>
+                            </div>
+                            <span className="font-bold text-lg tracking-wide bg-black/30 backdrop-blur-md px-4 py-2 rounded-lg">Reproducir Video Promocional</span>
+                          </button>
+                        </>
+                      ) : (
+                        <iframe
+                          src={`https://www.youtube.com/embed/${post.youtubeId}?autoplay=1&origin=${window.location.origin}&enablejsapi=1`}
+                          title="Video promocional del proyecto"
+                          className="absolute inset-0 w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                      )}
+                    </div>
+                  </div>
+                )}
 
                 <div className="mt-16 pt-10 border-t border-gray-100 flex justify-center">
                   <button

@@ -4,6 +4,7 @@ title: "Convergencia IT/OT: el puente hacia la eficiencia"
 date: "27-Oct-2025"
 author: "Pablo Lucero"
 category: "Ciberseguridad OT"
+youtubeId: "L23oIHZE14w"
 image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80"
 excerpt: "Proyecto de integración segura entre el ERP corporativo (IT) y el sistema de control de piso (OT) en una industria metalmecánica."
 ---

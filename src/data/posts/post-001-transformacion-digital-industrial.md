@@ -1,9 +1,10 @@
 ---
-id: post-005-transformacion-digital-industrial
+id: post-001-transformacion-digital-industrial
 title: "Bienvenidos al blog: el viaje hacia la Transformación Digital Industrial"
 date: "28-Sep-2025"
 author: "Pablo Lucero"
 category: "Educación"
+youtubeId: "L23oIHZE14w"
 image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1172"
 excerpt: "Lanzamiento de una plataforma educativa y consultora especializada en guiar a empresas latinas en su proceso de digitalización industrial."
 ---
