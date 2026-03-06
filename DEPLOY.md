@@ -22,7 +22,7 @@ El proyecto usa **GitHub Actions** para despliegue automático.
 ### Paso 1: Configuración Inicial de Git (Si no se ha hecho)
 Si tu repositorio local no está conectado a GitHub todavía:
 ```bash
-git remote add origin https://github.com/<TU-USUARIO>/pablo-lucero-github.git
+git remote add origin https://github.com/zoiber/portafolio-plucero.git
 git branch -M main
 ```
 
@@ -39,15 +39,15 @@ git push -u origin main
 
 ### Paso 4: Verificar URL
 El sitio estará disponible en:
-`https://<TU-USUARIO>.github.io/pablo-lucero-github/`
+`https://zoiber.github.io/portafolio-plucero/`
 
 > [!NOTE]
-> Reemplaza `<TU-USUARIO>` con tu nombre de usuario de GitHub (ej. `pablo-lucero`).
+> Reemplaza `zoiber` con tu nombre de usuario de GitHub si es necesario.
 
 ---
 
 ## Notas Técnicas
 
 - **Enrutamiento SPA**: Se usan `public/404.html` e `index.html` con scripts de redirección para que las rutas de React funcionen al refrescar.
-- **Base Path**: Vite está configurado con `base: '/pablo-lucero-github/'`.
+- **Base Path**: Vite está configurado con `base: '/portafolio-plucero/'`.
 - **Supabase**: Preconfigurado en `src/lib/customSupabaseClient.js`.
