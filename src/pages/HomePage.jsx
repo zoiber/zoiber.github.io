@@ -27,12 +27,12 @@ const HomePage = () => {
           <motion.p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
             Ideas y proyectos sobre la nueva revolución industrial.
           </motion.p>
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
+          {/* <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
             <button onClick={() => navigate('/portafolio')} className="btn-primary inline-flex items-center text-lg">
               Comienza a explorar
               <ArrowRight className="ml-2" size={20} />
             </button>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
     </>
