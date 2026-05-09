@@ -8,7 +8,7 @@ const ContactPage = () => {
     {
       id: 'email',
       label: 'EMAIL',
-      value: 'plucero@paskanai.com',
+      value: 'info@pablolucero.me',
       icon: <Mail size={24} />,
       link: 'mailto:info@pablolucero.me'
     },
