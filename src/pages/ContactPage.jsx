@@ -10,7 +10,7 @@ const ContactPage = () => {
       label: 'EMAIL',
       value: 'plucero@paskanai.com',
       icon: <Mail size={24} />,
-      link: 'mailto:plucero@paskanai.com'
+      link: 'mailto:info@pablolucero.me'
     },
     {
       id: 'ubicacion',
