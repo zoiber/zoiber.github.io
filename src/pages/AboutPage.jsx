@@ -76,7 +76,7 @@ const AboutPage = () => {
             </div>
             <div className="text-center">
               <div className="relative inline-block">
-                <img src="https://horizons-cdn.hostinger.com/548fedfe-7225-48e8-bdb6-2ae822f793ee/whatsapp-image-2025-09-21-at-10.52.16-pm-9lA2C.jpeg" alt="Foto profesional de Pablo Lucero" className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover mx-auto shadow-lg" />
+                <img src="/images/pablo-lucero.jpg" alt="Foto profesional de Pablo Lucero" className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover mx-auto shadow-lg" />
                 <div className="absolute bottom-2 right-2 bg-amber-500 p-3 rounded-full text-white shadow-md">
                   <Award size={24} />
                 </div>
