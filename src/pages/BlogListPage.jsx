@@ -112,7 +112,7 @@ const ProjectModal = ({ post, isOpen, onClose }) => {
                     onClick={onClose}
                     className="btn-primary"
                   >
-                    Cerrar Proyecto
+                    Cerrar artículo
                   </button>
                 </div>
               </div>
@@ -166,7 +166,7 @@ const BlogListPage = () => {
   return (
     <>
       <Helmet>
-        <title>Portafolio - Pablo Lucero | Transformación Digital Industrial</title>
+        <title>Blog - Pablo Lucero | Transformación Digital Industrial</title>
         <meta name="description" content="Tu punto de apoyo en el viaje hacia la transformación digital. Artículos y noticias sobre transformación digital industrial, Industria 4.0, IoT y automatización." />
       </Helmet>
       <div className="section-padding pt-32 bg-white min-h-screen">

@@ -5,7 +5,7 @@ import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 
 const navLinks = [
   { id: 'inicio', label: 'Inicio', path: '/' },
-  // { id: 'portafolio', label: 'Portafolio', path: '/portafolio' },
+  { id: 'blog', label: 'Blog', path: '/blog' },
   { id: 'acerca-de', label: 'Acerca de', path: '/acerca-de' },
   //{ id: 'recursos', label: 'Recursos', path: '/recursos' },
   { id: 'contacto', label: 'Contacto', path: '/contacto' }
@@ -17,7 +17,7 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const isPortfolio = location.pathname === '/portafolio';
+  const isBlog = location.pathname.startsWith('/blog') || location.pathname.startsWith('/portafolio');
 
   useEffect(() => {
     setActivePath(location.pathname);
@@ -54,7 +54,7 @@ const Navbar = () => {
             </motion.div>
 
             <AnimatePresence>
-              {isPortfolio && (
+              {isBlog && (
                 <motion.div
                   initial={{ opacity: 0, width: 0 }}
                   animate={{ opacity: 1, width: 'auto' }}
@@ -65,7 +65,7 @@ const Navbar = () => {
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
                     <input
                       type="text"
-                      placeholder="Buscar proyectos..."
+                      placeholder="Buscar articulos..."
                       className="pl-10 pr-4 py-1.5 bg-gray-100 border-none rounded-full text-sm focus:ring-2 focus:ring-amber-500 w-48 lg:w-64 transition-all duration-300"
                       value={searchParams.get('q') || ''}
                       onChange={handleSearchChange}

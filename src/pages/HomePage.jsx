@@ -28,7 +28,7 @@ const HomePage = () => {
             Ideas y proyectos sobre la nueva revolución industrial.
           </motion.p>
           {/* <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-            <button onClick={() => navigate('/portafolio')} className="btn-primary inline-flex items-center text-lg">
+            <button onClick={() => navigate('/blog')} className="btn-primary inline-flex items-center text-lg">
               Comienza a explorar
               <ArrowRight className="ml-2" size={20} />
             </button>
