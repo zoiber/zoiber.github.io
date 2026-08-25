@@ -4,7 +4,9 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowLeft, Linkedin, X, Facebook, Send } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import MarkdownTable from '@/components/MarkdownTable';
 import { getPostById } from '../utils/blogLoader';
 import { supabase } from '@/lib/customSupabaseClient';
 import { useToast } from '@/components/ui/use-toast';
@@ -209,7 +211,11 @@ const BlogPostPage = () => {
             </div>
 
             <div className="prose lg:prose-xl max-w-none text-gray-700">
-              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                components={{ table: MarkdownTable }}
+              >
                 {post.content}
               </ReactMarkdown>
             </div>

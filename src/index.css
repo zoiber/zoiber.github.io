@@ -133,6 +133,31 @@ body {
 .prose strong {
   @apply font-bold text-gray-900;
 }
+.prose .markdown-table-wrapper {
+  @apply my-8 w-full overflow-x-auto rounded-xl border border-gray-200 shadow-sm;
+}
+.prose table {
+  @apply m-0 w-full min-w-[680px] border-collapse text-left text-base;
+}
+.prose thead {
+  @apply bg-gray-900 text-white;
+}
+.prose th {
+  @apply px-5 py-4 font-semibold tracking-wide;
+}
+.prose td {
+  @apply border-t border-gray-200 px-5 py-4 align-top;
+}
+.prose tbody tr:nth-child(even) {
+  @apply bg-gray-50;
+}
+.prose tbody tr:hover {
+  @apply bg-amber-50;
+}
+.prose th:first-child,
+.prose td:first-child {
+  @apply whitespace-nowrap;
+}
 
 .modal {
   -ms-overflow-style: none;

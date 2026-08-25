@@ -5,7 +5,9 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { Search, Calendar, X as CloseIcon, User, ArrowLeft } from 'lucide-react';
 import { getAllPosts } from '../utils/blogLoader';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import MarkdownTable from '@/components/MarkdownTable';
 import { AnimatePresence } from 'framer-motion';
 
 const ProjectModal = ({ post, isOpen, onClose }) => {
@@ -63,7 +65,11 @@ const ProjectModal = ({ post, isOpen, onClose }) => {
                 </div>
 
                 <div className="prose prose-lg max-w-none text-gray-700 prose-headings:text-gray-900 prose-amber">
-                  <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeRaw]}
+                    components={{ table: MarkdownTable }}
+                  >
                     {post.content}
                   </ReactMarkdown>
                 </div>
