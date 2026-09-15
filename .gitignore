@@ -25,3 +25,11 @@ dist-ssr/
 
 # Exclude DEPLOY.md from version control
 DEPLOY.md
+
+# Local system documentation (do not publish to GitHub)
+DOCUMENTACION_SISTEMA.md
+
+# Editorial planning files (local only)
+backlog_publicaciones.xlsx
+propuesta_evolucion_web.md
+publicaciones/
