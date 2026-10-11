@@ -4,7 +4,7 @@ title: "¿Qué es realmente la transformación digital industrial?"
 date: "13-Sep-2026"
 author: "Pablo Lucero"
 category: "Transformación Digital Industrial"
-image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400"
+image: "/images/posts/post-001-transformacion-digital/00-portada.jpg"
 excerpt: "Una visión práctica de la transformación digital industrial: por qué no consiste en comprar tecnología y cómo conectar personas, procesos y tecnología para generar mejoras sostenibles en planta."
 ---
 

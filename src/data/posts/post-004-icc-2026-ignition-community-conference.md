@@ -1,7 +1,7 @@
 ---
 id: icc-2026-ignition-community-conference-del-dato-a-la-decision
 title: "ICC 2026: del dato a la decisión. Lo que dejó la Ignition Community Conference"
-date: "11-Oct-2026"
+date: "29-Sep-2026"
 author: "Pablo Lucero"
 category: "Eventos e Industria 4.0"
 image: "/images/posts/post-004-icc-2026-ignition-community-conference/00-portada.jpg"

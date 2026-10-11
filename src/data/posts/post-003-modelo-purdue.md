@@ -4,7 +4,7 @@ title: "Modelo Purdue explicado para ingenieros: cómo usarlo para ordenar una a
 date: "14-Sep-2026"
 author: "Pablo Lucero"
 category: "Arquitectura Industrial"
-image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1400"
+image: "/images/posts/post-003-modelo-purdue/00-portada.jpg"
 excerpt: "Una explicación práctica del modelo Purdue para ordenar sistemas OT/IT, responsabilidades, flujos de información y decisiones de arquitectura industrial."
 ---
 

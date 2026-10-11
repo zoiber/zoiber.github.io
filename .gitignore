@@ -33,3 +33,6 @@ DOCUMENTACION_SISTEMA.md
 backlog_publicaciones.xlsx
 propuesta_evolucion_web.md
 publicaciones/
+
+# Archivos de bloqueo de LibreOffice
+.~lock.*#

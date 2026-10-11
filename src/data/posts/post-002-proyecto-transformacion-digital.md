@@ -4,7 +4,7 @@ title: "Cómo estructurar un proyecto de transformación digital industrial"
 date: "14-Sep-2026"
 author: "Pablo Lucero"
 category: "Gestión de Proyectos"
-image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1400"
+image: "/images/posts/post-002-proyecto-transformacion-digital/00-portada.jpg"
 excerpt: "Una metodología práctica para convertir un problema operacional en un proyecto con alcance, arquitectura, adopción, KPI y evaluación económica."
 ---
 
