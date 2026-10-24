@@ -6,6 +6,7 @@ import AboutPage from '@/pages/AboutPage';
 import BlogListPage from '@/pages/BlogListPage';
 import BlogPostPage from '@/pages/BlogPostPage';
 import ResourcesPage from '@/pages/ResourcesPage';
+import ResourcePage from '@/pages/ResourcePage';
 import ContactPage from '@/pages/ContactPage';
 import { AuthProvider } from '@/contexts/SupabaseAuthContext';
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="portafolio" element={<BlogListPage />} />
             <Route path="portafolio/:postId" element={<BlogPostPage />} />
             <Route path="recursos" element={<ResourcesPage />} />
+            <Route path="recursos/:resourceId" element={<ResourcePage />} />
             <Route path="contacto" element={<ContactPage />} />
           </Route>
         </Routes>
