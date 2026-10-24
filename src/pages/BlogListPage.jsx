@@ -2,157 +2,18 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Link, useSearchParams } from 'react-router-dom';
-import { Search, Calendar, X as CloseIcon, User, ArrowLeft } from 'lucide-react';
 import { getAllPosts } from '../utils/blogLoader';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw';
-import MarkdownTable from '@/components/MarkdownTable';
-import { AnimatePresence } from 'framer-motion';
-
-const ProjectModal = ({ post, isOpen, onClose }) => {
-  const [isPlayingVideo, setIsPlayingVideo] = useState(false);
-
-  if (!post) return null;
-
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-            className="absolute inset-0 bg-black/60 backdrop-blur-md"
-          />
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl z-10 custom-scrollbar"
-          >
-            <button
-              onClick={onClose}
-              className="absolute top-6 right-6 p-2 bg-gray-100 hover:bg-amber-100 text-gray-500 hover:text-amber-600 rounded-full transition-colors duration-300 z-20"
-            >
-              <CloseIcon size={24} />
-            </button>
-
-            <div className="p-0">
-              <div className="aspect-[21/9] w-full relative">
-                <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
-              </div>
-
-              <div className="px-8 pb-12 md:px-16 -mt-20 relative z-10">
-                <span className="inline-block px-4 py-1.5 bg-amber-100 text-amber-700 rounded-full text-sm font-bold uppercase tracking-widest mb-6 border border-amber-200 shadow-sm">
-                  {post.category}
-                </span>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  {post.title}
-                </h2>
-
-                <div className="flex flex-wrap items-center gap-6 text-gray-500 font-medium mb-10 pb-10 border-b border-gray-100">
-                  <div className="flex items-center">
-                    <Calendar size={18} className="mr-2 text-amber-500" />
-                    <span>{post.date}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <User size={18} className="mr-2 text-amber-500" />
-                    <span>{post.author}</span>
-                  </div>
-                </div>
-
-                <div className="prose prose-lg max-w-none text-gray-700 prose-headings:text-gray-900 prose-amber">
-                  <ReactMarkdown
-                    remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[rehypeRaw]}
-                    components={{ table: MarkdownTable }}
-                  >
-                    {post.content}
-                  </ReactMarkdown>
-                </div>
-
-                {post.youtubeId && (
-                  <div className="mt-16 pt-10 border-t border-gray-100">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-8">Galería</h3>
-                    <div className="group/video relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg bg-gray-900 flex items-center justify-center">
-                      {!isPlayingVideo ? (
-                        <>
-                          <img
-                            src={`https://img.youtube.com/vi/${post.youtubeId}/maxresdefault.jpg`}
-                            alt="Miniatura del video"
-                            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover/video:scale-105 transition-transform duration-700"
-                            onError={(e) => e.target.src = post.image}
-                          />
-                          <div className="absolute inset-0 bg-black/20 group-hover/video:bg-black/40 transition-colors duration-300" />
-                          <button
-                            onClick={() => setIsPlayingVideo(true)}
-                            className="relative z-10 flex flex-col items-center gap-4 text-white group-hover/video:scale-110 transition-transform duration-300"
-                          >
-                            <div className="w-20 h-20 bg-amber-500 rounded-full flex items-center justify-center shadow-2xl pulse-animation">
-                              <svg className="w-10 h-10 fill-white ml-1" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z" />
-                              </svg>
-                            </div>
-                            <span className="font-bold text-lg tracking-wide bg-black/30 backdrop-blur-md px-4 py-2 rounded-lg">Reproducir Video Promocional</span>
-                          </button>
-                        </>
-                      ) : (
-                        <iframe
-                          src={`https://www.youtube.com/embed/${post.youtubeId}?autoplay=1&origin=${window.location.origin}&enablejsapi=1`}
-                          title="Video promocional del proyecto"
-                          className="absolute inset-0 w-full h-full"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          referrerPolicy="no-referrer-when-downgrade"
-                        ></iframe>
-                      )}
-                    </div>
-                  </div>
-                )}
-
-                <div className="mt-16 pt-10 border-t border-gray-100 flex justify-center">
-                  <button
-                    onClick={onClose}
-                    className="btn-primary"
-                  >
-                    Cerrar artículo
-                  </button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      )}
-    </AnimatePresence>
-  );
-};
 
 const BlogListPage = () => {
   const [searchParams] = useSearchParams();
   const searchTerm = searchParams.get('q') || '';
   const [posts, setPosts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('Todos');
-  const [selectedPost, setSelectedPost] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const loadedPosts = getAllPosts();
     setPosts(loadedPosts);
   }, []);
-
-  const openPost = (post) => {
-    setSelectedPost(post);
-    setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closePost = () => {
-    setIsModalOpen(false);
-    document.body.style.overflow = 'auto';
-  };
 
   const categories = useMemo(() => {
     return ['Todos', ...new Set(posts.map(post => post.category))];
@@ -198,13 +59,12 @@ const BlogListPage = () => {
               {filteredPosts.map((post, index) => (
                 <motion.article
                   key={post.id}
-                  className="group cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  onClick={() => openPost(post)}
                 >
+                  <Link to={`/blog/${post.slug}`} className="group block">
                   <div className="relative overflow-hidden rounded-3xl aspect-[16/10] shadow-lg mb-6">
                     <img
                       src={post.image}
@@ -228,6 +88,7 @@ const BlogListPage = () => {
                       </p>
                     </div>
                   </div>
+                  </Link>
                 </motion.article>
               ))}
             </div>
@@ -246,12 +107,6 @@ const BlogListPage = () => {
           </div>
         </div>
       </div>
-
-      <ProjectModal
-        post={selectedPost}
-        isOpen={isModalOpen}
-        onClose={closePost}
-      />
     </>
   );
 };
