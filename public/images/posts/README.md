@@ -10,6 +10,7 @@ Una carpeta por post, con el mismo nombre que su archivo en `src/data/posts/`.
 | `post-004-icc-2026-ignition-community-conference/` | post-004-icc-2026-ignition-community-conference.md |
 | `post-005-mas-alla-de-los-pilotos-modelo-operativo-ia/` | post-005-mas-alla-de-los-pilotos-modelo-operativo-ia.md |
 | `post-006-hablemos-sobre-ot/` | post-006-hablemos-sobre-ot.md |
+| `post-007-unified-namespace/` | post-007-unified-namespace.md |
 
 ## Convenciones
 - Nombres en minúsculas, sin espacios ni tildes: `01-portada.jpg`, `02-diagrama-purdue.png`.

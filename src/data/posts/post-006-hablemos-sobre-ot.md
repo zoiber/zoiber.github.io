@@ -125,7 +125,7 @@ La red de control no debería ser una extensión plana de la red corporativa. Se
 Si cada sistema nombra las cosas a su manera, la integración se convierte en un proyecto eterno de traducciones. Definir cómo se llama un activo, una línea, un estado o un evento, y usar referencias como ISA-95 para estructurar esa jerarquía, es lo que permite que el dato de OT tenga significado para IT.
 
 **3. Arquitecturas como el UNS.**
-El **Unified Namespace (UNS)** propone un punto central, organizado y en tiempo real donde cada sistema publica su información con contexto y del que otros sistemas pueden consumirla, sin integraciones punto a punto. No es una solución mágica ni aplica a todos los casos, pero es una forma muy potente de desacoplar el piso de planta de las aplicaciones de negocio. Le dedicaré un artículo propio.
+El **Unified Namespace (UNS)** propone un punto central, organizado y en tiempo real donde cada sistema publica su información con contexto y del que otros sistemas pueden consumirla, sin integraciones punto a punto. No es una solución mágica ni aplica a todos los casos, pero es una forma muy potente de desacoplar el piso de planta de las aplicaciones de negocio. Lo explico en detalle en [Qué es un Unified Namespace (UNS) y cuándo tiene sentido implementarlo](/blog/que-es-unified-namespace-uns-cuando-implementarlo).
 
 **4. Equipos que hablan ambos idiomas.**
 Este es el pilar más difícil y el más importante. La tecnología se compra; el criterio se construye. Necesitamos ingenieros de automatización que entiendan redes, datos y ciberseguridad, y profesionales de IT que entiendan qué significa un paro de línea. Y necesitamos líderes que pongan a ambos en la misma mesa desde el inicio del proyecto, no cuando algo ya falló.
