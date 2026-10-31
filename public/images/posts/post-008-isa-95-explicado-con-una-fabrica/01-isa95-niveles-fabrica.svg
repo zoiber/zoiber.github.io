@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="Inter, Segoe UI, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Niveles funcionales de ISA-95 aplicados a una fábrica de refrigeradores</title>
+  <desc id="d">Cinco niveles, del 4 al 0, con su escala de tiempo y un ejemplo en una fábrica de refrigeradores. Entre el nivel 4 y el nivel 3 se destacan los cuatro flujos de información de ISA-95.</desc>
+  <rect width="960" height="520" fill="#ffffff"/>
+  <style>
+    .lvl{fill:#f4f6f8;stroke:#334155;stroke-width:1.5}
+    .l3{fill:#e0f2f1;stroke:#0e7490;stroke-width:2}
+    .n{font-size:22px;font-weight:700;fill:#0f172a;text-anchor:middle}
+    .h{font-size:15px;font-weight:700;fill:#0f172a}
+    .s{font-size:13px;fill:#475569}
+    .e{font-size:13px;fill:#0f172a}
+    .f{font-size:12.5px;fill:#0e7490;font-weight:600}
+    .ttl{font-size:18px;font-weight:700;fill:#0f172a}
+  </style>
+  <text x="40" y="36" class="ttl">ISA-95 en Andino: quién decide qué y a qué ritmo</text>
+
+  <!-- Nivel 4 -->
+  <rect class="lvl" x="40" y="56" width="880" height="64" rx="8"/>
+  <text x="80" y="96" class="n">4</text>
+  <text x="120" y="82" class="h">Planificación del negocio y logística (ERP)</text>
+  <text x="120" y="102" class="s">Meses · semanas · días</text>
+  <text x="520" y="82" class="e">Fabricar 1.200 REF-1450 esta semana</text>
+  <text x="520" y="102" class="e">Comprar compresores, costear, despachar</text>
+
+  <!-- Frontera 4-3 -->
+  <line x1="40" y1="148" x2="920" y2="148" stroke="#0e7490" stroke-width="2" stroke-dasharray="6 5"/>
+  <rect x="300" y="128" width="360" height="40" rx="6" fill="#ffffff" stroke="#0e7490" stroke-width="1.5"/>
+  <text x="480" y="145" text-anchor="middle" class="f">↓ Definición de producto · Programa de producción</text>
+  <text x="480" y="161" text-anchor="middle" class="f">↑ Capacidad de producción · Desempeño de producción</text>
+
+  <!-- Nivel 3 -->
+  <rect class="l3" x="40" y="176" width="880" height="84" rx="8"/>
+  <text x="80" y="226" class="n">3</text>
+  <text x="120" y="202" class="h">Gestión de operaciones de manufactura</text>
+  <text x="120" y="222" class="s">Días · turnos · horas · minutos</text>
+  <text x="120" y="244" class="s">Producción · Calidad · Mantenimiento · Inventario</text>
+  <text x="520" y="202" class="e">Secuenciar órdenes por línea y turno</text>
+  <text x="520" y="222" class="e">Asociar número de serie con lote de compresor</text>
+  <text x="520" y="242" class="e">Contar unidades conformes y reprocesos</text>
+
+  <!-- Nivel 2 -->
+  <rect class="lvl" x="40" y="276" width="880" height="64" rx="8"/>
+  <text x="80" y="316" class="n">2</text>
+  <text x="120" y="302" class="h">Supervisión y control (SCADA, HMI)</text>
+  <text x="120" y="322" class="s">Minutos · segundos</text>
+  <text x="520" y="302" class="e">Estado de la espumadora en pantalla</text>
+  <text x="520" y="322" class="e">Alarmas de la línea de ensamble</text>
+
+  <!-- Nivel 1 -->
+  <rect class="lvl" x="40" y="356" width="880" height="64" rx="8"/>
+  <text x="80" y="396" class="n">1</text>
+  <text x="120" y="382" class="h">Sensado y actuación (PLC, sensores)</text>
+  <text x="120" y="402" class="s">Segundos · milisegundos</text>
+  <text x="520" y="382" class="e">Temperatura, presión y tiempo de inyección</text>
+  <text x="520" y="402" class="e">Resultado de la prueba de hermeticidad</text>
+
+  <!-- Nivel 0 -->
+  <rect class="lvl" x="40" y="436" width="880" height="64" rx="8"/>
+  <text x="80" y="476" class="n">0</text>
+  <text x="120" y="462" class="h">Proceso físico</text>
+  <text x="120" y="482" class="s">Tiempo real</text>
+  <text x="520" y="462" class="e">El poliuretano reaccionando</text>
+  <text x="520" y="482" class="e">dentro del gabinete</text>
+
+  <line x1="490" y1="66" x2="490" y2="110" stroke="#cbd5e1"/>
+  <line x1="490" y1="186" x2="490" y2="250" stroke="#cbd5e1"/>
+  <line x1="490" y1="286" x2="490" y2="330" stroke="#cbd5e1"/>
+  <line x1="490" y1="366" x2="490" y2="410" stroke="#cbd5e1"/>
+  <line x1="490" y1="446" x2="490" y2="490" stroke="#cbd5e1"/>
+</svg>
