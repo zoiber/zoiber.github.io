@@ -152,4 +152,4 @@ La convergencia IT/OT no consiste en que un equipo absorba al otro. Consiste en 
 
 ---
 
-**Siguiente lectura:** si quieres entender las particularidades de la OT antes de diseñar tu estrategia de convergencia, empieza por [Hablemos sobre OT](/blog/hablemos-sobre-ot-tecnologias-de-la-operacion) y continúa con [Modelo Purdue explicado para ingenieros](/blog/modelo-purdue-explicado-para-ingenieros).
+**Siguiente lectura:** si quieres entender las particularidades de OT antes de diseñar tu estrategia de convergencia, empieza por [Hablemos sobre OT](/blog/hablemos-sobre-ot-tecnologias-de-la-operacion) y continúa con [Modelo Purdue explicado para ingenieros](/blog/modelo-purdue-explicado-para-ingenieros).
