@@ -8,7 +8,7 @@ image: "/images/posts/post-008-isa-95-explicado-con-una-fabrica/00-portada.jpg"
 excerpt: "Qué es ISA-95, cómo se leen sus niveles y modelos, y cómo aplicarlo a una fábrica real de refrigeradores: desde la orden del ERP hasta el número de serie en la línea."
 ---
 
-Si alguna vez estuviste en una reunión donde desde el ERP decían que se habían fabricado 1.200 refrigeradores, el SCADA decía 1.180 y el supervisor de línea decía "más o menos 1.150, porque hubo reprocesos", ya conoces el problema que ISA-95 intenta resolver.
+Si alguna vez estuviste en una reunión donde desde el ERP decían que se habían fabricado 1.200 productos, el SCADA decía 1.180 y el supervisor de línea decía "más o menos 1.150, porque hubo reprocesos", ya conoces el problema que ISA-95 intenta resolver.
 
 No es un problema de tecnología. Es un problema de idioma: cada sistema y cada área describen la misma fábrica con palabras distintas, a ritmos distintos y con responsabilidades difusas en la frontera. ISA-95 es, ante todo, un acuerdo sobre ese idioma.
 
