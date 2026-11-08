@@ -136,6 +136,12 @@ body {
 .prose img {
   @apply w-full h-auto rounded-xl shadow-md;
 }
+/* Diagramas: tamaño natural, centrados y con alto limitado para verlos completos en pantalla */
+.prose figure.diagrama img {
+  @apply w-auto mx-auto shadow-none border border-gray-200;
+  max-width: min(100%, 760px);
+  max-height: min(62vh, 560px);
+}
 .prose figcaption {
   @apply mt-3 text-center text-sm italic text-gray-500;
 }

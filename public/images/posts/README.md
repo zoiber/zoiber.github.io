@@ -13,6 +13,16 @@ Una carpeta por post, con el mismo nombre que su archivo en `src/data/posts/`.
 | `post-007-unified-namespace/` | post-007-unified-namespace.md |
 | `post-008-isa-95-explicado-con-una-fabrica/` | post-008-isa-95-explicado-con-una-fabrica.md |
 | `post-009-convergencia-it-ot/` | post-009-convergencia-it-ot.md |
+| `post-010-cuatro-presiones-digitalizacion/` | post-010-cuatro-presiones-digitalizacion.md |
+| `post-011-tres-dominios-de-valor/` | post-011-tres-dominios-de-valor.md |
+| `post-012-trazabilidad-automatizada/` | post-012-trazabilidad-automatizada.md |
+| `post-013-irreversibilidad-en-planta/` | post-013-irreversibilidad-en-planta.md |
+| `post-014-procesos-manufactura-infraestructura/` | post-014-procesos-manufactura-infraestructura.md |
+| `post-015-cia-vs-siac/` | post-015-cia-vs-siac.md |
+| `post-016-primero-no-explotar/` | post-016-primero-no-explotar.md |
+| `post-017-roles-en-una-planta/` | post-017-roles-en-una-planta.md |
+| `post-018-que-es-ot-perfiles/` | post-018-que-es-ot-perfiles.md |
+| `post-019-it-no-es-google/` | post-019-it-no-es-google.md |
 
 ## Convenciones
 - Nombres en minúsculas, sin espacios ni tildes: `01-portada.jpg`, `02-diagrama-purdue.png`.
