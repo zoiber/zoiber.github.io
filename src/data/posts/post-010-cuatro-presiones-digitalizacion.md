@@ -26,7 +26,7 @@ La flexibilidad dejó de ser un lujo: ahora es el requisito mínimo para competi
 
 ## 3. El estancamiento de la productividad
 
-Entre 2004 y 2024, la productividad laboral de la manufactura en Estados Unidos y Europa cayó alrededor de un 5 %. Fue la misma década de la Industria 4.0, las fábricas inteligentes y el IIoT. La tecnología funciona, pero la mayoría de las empresas la atornilló sobre procesos y arquitecturas heredadas sin cambiar cómo se trabaja. Se instalaron sensores y tableros, y la productividad siguió plana.
+Entre 2004 y 2024, la productividad laboral de la manufactura en Estados Unidos y Europa cayó alrededor de un 5 %, según [*The IT/OT Handbook*](https://itotbook.com), de David Ariens y Willem van Lammeren. En Estados Unidos, el [análisis de ITIF (2024)](https://itif.org/publications/2024/11/04/dont-worry-about-manufacturing-jobs-worry-about-manufacturing-productivity/) muestra la misma tendencia. Fue la misma década de la Industria 4.0, las fábricas inteligentes y el IIoT. La tecnología funciona, pero la mayoría de las empresas la atornilló sobre procesos y arquitecturas heredadas sin cambiar cómo se trabaja. Se instalaron sensores y tableros, y la productividad siguió plana.
 
 ## 4. La aceleración de la IA
 

@@ -29,6 +29,8 @@ Un ingeniero de planta que se niega a actualizar el software del controlador a m
 
 Y el profesional de IT que insiste en parchear tampoco es imprudente. Sabe que un sistema sin actualizar es una puerta abierta, y que un ataque puede detener la planta tanto como un mal cambio.
 
+Esta tensión, y las palancas para convertirla en colaboración, las desarrollé en [Convergencia IT/OT: por qué la transformación digital se decide entre dos culturas](/blog/convergencia-it-ot-transformacion-digital-dos-culturas).
+
 ## Lo que sí se puede hacer
 
 Reconocer la irreversibilidad no significa renunciar a la agilidad en planta. Significa trasladar la experimentación a donde sí es reversible:

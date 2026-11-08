@@ -33,7 +33,7 @@ La mayoría de los profesionales de OT viene de la mecánica o la electromecáni
 
 ## Por qué OT piensa en estabilidad
 
-Por los largos ciclos de vida de los activos, OT privilegia la estabilidad, la durabilidad y la fiabilidad sobre la innovación de vanguardia. No es el mundo de "moverse rápido y romper cosas": cuando se trabaja con activos de millones o procesos regulados, un cambio innecesario es un riesgo, y todo cambio en automatización se planifica, valida y ejecuta con cuidado. 
+Por los largos ciclos de vida de los activos, OT privilegia la estabilidad, la durabilidad y la fiabilidad sobre la innovación de vanguardia. No es el mundo de "moverse rápido y romper cosas": cuando se trabaja con activos de millones o procesos regulados, un cambio innecesario es un riesgo, y todo cambio en automatización se planifica, valida y ejecuta con cuidado. Si quieres profundizar en qué hace distinta a OT de IT y por qué la transformación empieza en el PLC, lo desarrollé en [Hablemos sobre OT](/blog/hablemos-sobre-ot-tecnologias-de-la-operacion). 
 
 ## No todas las empresas tienen un "departamento de OT"
 
